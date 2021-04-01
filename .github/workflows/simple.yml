@@ -1,14 +1,19 @@
-name: Shell Commands
+name: Deploy on server
 
 on: [push]
 
 jobs:
-  run-shell-command:
+  web-deploy:
     runs-on: ubuntu-latest
     steps: 
-      - name: echo a string
-        run: echo "Hello World"
-      - name: multiline script
-        run: |
-          node -v
-          npm -v
+      - name: Get latest code
+        uses: actions/checkout@v2.3.2
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: brs1new.internetway.net
+          username: brs
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /srv/www/brs/brsbrokers.com/www/htdocs/website_test/
+          protocol: ftps
+          security: loose
