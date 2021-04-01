@@ -14,4 +14,3 @@ jobs:
           ftp_password: ${{ secrets.FTP_PASSWORD }}
           dist_target_dir: /srv/www/brs/brsbrokers.com/www/htdocs/website_test/
           delete: "true"
-          ftps: initial-prot
