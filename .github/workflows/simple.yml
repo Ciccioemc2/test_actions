@@ -12,5 +12,5 @@ jobs:
           ftp_host: brs1new.internetway.net
           ftp_username: brs
           ftp_password: ${{ secrets.FTP_PASSWORD }}
-          dist_target_dir: /srv/www/brs/brsbrokers.com/www/htdocs/website_test/
+          dist_target_dir: /website_test/
           delete: "true"
