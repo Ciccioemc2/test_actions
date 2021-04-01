@@ -15,6 +15,6 @@ jobs:
           server: brs1new.internetway.net
           username: brs
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /srv/www/brs/brsbrokers.com/www/htdocs/website_test/
+          server-dir: srv/www/brs/brsbrokers.com/www/htdocs/website_test/
           protocol: ftps
           security: loose
