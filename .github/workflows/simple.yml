@@ -1,11 +1,10 @@
 name: Deploy on server
 
-on: push
+on: [push]
 
 jobs:
-  FTP-Deploy-Action:
   web-deploy:
-    name: FTP-Deploy-Action
+    name: Deploy
     runs-on: ubuntu-latest
     steps: 
       - name: Get latest code
