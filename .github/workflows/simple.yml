@@ -1,10 +1,11 @@
 name: Deploy on server
 
-on: [push]
+on: push
 
 jobs:
+  FTP-Deploy-Action:
   web-deploy:
-    name: Deploy
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps: 
       - name: Get latest code
@@ -15,6 +16,6 @@ jobs:
           server: brs1new.internetway.net
           username: brs
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: srv/www/brs/brsbrokers.com/www/htdocs/website_test/
+          server-dir: brsbrokers.com/www/htdocs/website_test/
           protocol: ftps
           security: loose
